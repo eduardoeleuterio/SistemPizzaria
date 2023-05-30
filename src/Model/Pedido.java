@@ -1,9 +1,10 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Pedido {
+public class Pedido implements Serializable {
     public Cliente cliente;
     public List<ProdutoPedido> produtos;
     public Funcionario atendente;

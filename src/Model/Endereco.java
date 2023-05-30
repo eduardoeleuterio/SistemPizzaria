@@ -6,5 +6,5 @@ public class Endereco {
     public String complemento;
     public String referencia;
 
-    
+
 }
