@@ -1,9 +1,9 @@
 package Model;
 
-public class Atendente extends Pessoa{
+public class Atendente extends Pessoa implements Autenticavel{
 
-
-    public Atendente(String nome, int senha, String email, double cpf) {
-        super(nome, senha, email, cpf);
+    public Atendente(double cpf, String nome) {
+        super(cpf, nome);
     }
+
 }
