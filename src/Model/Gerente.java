@@ -17,8 +17,4 @@ public class Gerente extends Funcionario implements Serializable {
     }
 
 
-
-L
-
-
 }
