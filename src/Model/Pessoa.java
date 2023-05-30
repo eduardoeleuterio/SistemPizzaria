@@ -7,10 +7,21 @@ public abstract class Pessoa  {
     public String email;
     public Double cpf;
 
-
-    public Pessoa(String nome) {
+    public Pessoa(String nome, int senha, String email, double cpf) {
         this.nome = nome;
+        this.senha = senha;
+        this.email = email;
+        this.cpf = cpf;
     }
+
+
+
+    public Double getCpf() {
+        return cpf;
+    }
+
+
+
 
     public String getNome() {
         return nome;
