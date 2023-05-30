@@ -1,17 +1,17 @@
 package Model;
 
-public abstract class Autenticavel  {
+public interface Autenticavel  {
 
 
-    public void preparando(Pedido produto)
+    public default void preparando(Pedido produto)
     {
         produto.status = 1;
     }
-    public void feito(Pedido produto)
+    public default void feito(Pedido produto)
     {
         produto.status = 2;
     }
-    public void enviado(Pedido produto)
+    public default void enviado(Pedido produto)
     {
         produto.status = 3;
     }
