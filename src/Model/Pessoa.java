@@ -2,7 +2,7 @@ package Model;
 
 public abstract class Pessoa  {
 
-    public Double cpf;
+    public double cpf;
     public String nome;
 
     public Pessoa(double cpf, String nome) {
