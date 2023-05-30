@@ -2,18 +2,20 @@ package Model;
 
 public class Gerente extends Pessoa{
 
-    public Gerente(String nome, int senha, String email, double cpf)
-    {
-        super(nome, senha, email, cpf);
+    public String senha;
+    public String email;
+
+
+    public Gerente(double cpf, String nome, String senha) {
+        super(cpf, nome);
+        this.senha = senha;
     }
 
-    public Integer getSenha()
-    {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(Integer senha)
-    {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 }
