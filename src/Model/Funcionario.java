@@ -1,6 +1,8 @@
 package Model;
 
-public class Funcionario extends Pessoa{
+import java.io.Serializable;
+
+public class Funcionario extends Pessoa implements Serializable {
 
     public char[] registro;
     public String login;
@@ -13,5 +15,13 @@ public class Funcionario extends Pessoa{
         this.registro = registro;
         this.login = login;
         this.senha = senha;
+    }
+
+    public void exibir() {
+        System.out.println("Funcionario: " + cpf + login + " ");
+        for (char c : senha) {
+            System.out.print(c);
+        }
+        System.out.println("");
     }
 }
