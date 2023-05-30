@@ -1,8 +1,12 @@
 package Model;
 
-public class Pessoa {
+public abstract class Pessoa  {
 
-    private String nome;
+    public String nome;
+    public Integer senha;
+    public String email;
+    public Double cpf;
+
 
     public Pessoa(String nome) {
         this.nome = nome;
