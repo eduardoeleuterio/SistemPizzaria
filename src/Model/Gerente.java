@@ -1,21 +1,24 @@
 package Model;
 
-public class Gerente extends Pessoa{
+import java.io.Serializable;
 
-    public String senha;
+public class Gerente extends Funcionario implements Serializable {
+
     public String email;
 
 
-    public Gerente(double cpf, String nome, String senha) {
-        super(cpf, nome);
-        this.senha = senha;
+    public Gerente(double cpf, String nome, int registro, String login, char[] senha, String senha1) {
+        super(cpf, nome, registro, login, senha);
+
     }
 
-    public String getSenha() {
-        return senha;
+    public void exibir(){
+        System.out.println("Gerente" + nome + cpf + email + senha);
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+
+
+L
+
+
 }

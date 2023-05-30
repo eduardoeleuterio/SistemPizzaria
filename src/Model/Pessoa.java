@@ -1,12 +1,19 @@
 package Model;
 
-public abstract class Pessoa  {
+import java.io.Serializable;
 
-    public double cpf;
+public class Pessoa implements Serializable {
+
+    public Double cpf;
     public String nome;
 
     public Pessoa(double cpf, String nome) {
         this.nome = nome;
         this.cpf = cpf;
+    }
+
+
+    public void exibir(){
+        System.out.println("Pessoa" + nome + cpf);
     }
 }
