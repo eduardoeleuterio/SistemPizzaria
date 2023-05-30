@@ -7,7 +7,7 @@ public class Gerente extends Funcionario implements Serializable {
     public String email;
 
 
-    public Gerente(double cpf, String nome, int registro, String login, char[] senha, String senha1) {
+    public Gerente(String cpf, String nome, char[] registro, String login, char[] senha) {
         super(cpf, nome, registro, login, senha);
 
     }
@@ -15,6 +15,10 @@ public class Gerente extends Funcionario implements Serializable {
     public void exibir(){
         System.out.println("Gerente" + nome + cpf + email + senha);
     }
+
+
+
+
 
 
 }

@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 public class Funcionario extends Pessoa implements Serializable {
 
-    public int registro;
+    public char[] registro;
     public String login;
     public char[] senha;
 
     // Construtor do Funcionario
-    public Funcionario(double cpf, String nome, int registro,
+    public Funcionario(String cpf, String nome, char[] registro,
                        String login, char[] senha) {
         super(cpf, nome);
         this.registro = registro;
