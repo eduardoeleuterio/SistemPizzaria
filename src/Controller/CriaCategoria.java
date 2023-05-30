@@ -8,7 +8,7 @@ public class CriaCategoria {
         
         try {
             Serializador.gravar("Categoria.ser", categoria);
-            System.out.println("Categoria gravado");
+            System.out.println("Categoria gravada"+ categoria);
         } catch (IOException e) {
             System.out.println("IOException");
             e.printStackTrace();
