@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Pedido {
     public Cliente cliente;
@@ -34,5 +35,23 @@ public class Pedido {
         this.date = date;
         this.hora = hora;
         this.status = status;
+    }
+
+    public void exibir() {
+        cliente.exibir();
+        for (ProdutoPedido prod : produtos) {
+            prod.exibir();
+        }
+        atendente.exibir();
+        endereco.exibir();
+        System.out.println(entrega);
+        System.out.println(desconto);
+        System.out.println(taxa_entrega);
+        System.out.println(valor);
+        System.out.println(forma_pagamento);
+        System.out.println(troco);
+        System.out.println(date);
+        System.out.println(hora);
+        System.out.println(status);
     }
 }
