@@ -14,6 +14,9 @@ public class Pessoa implements Serializable {
 
 
     public void exibir(){
-        System.out.println("Pessoa" + nome + cpf);
+
+        System.out.println("Pessoa Nome" + nome);
+        System.out.println("Pessoa Cpf" + cpf);
+
     }
 }

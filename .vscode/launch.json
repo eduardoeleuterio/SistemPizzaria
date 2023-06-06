@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "CriaCategoria",
+            "request": "launch",
+            "mainClass": "Controller.CriaCategoria",
+            "projectName": "SistemPizzaria_c363ec3b"
+        },
+        {
+            "type": "java",
+            "name": "CriaEndereco",
+            "request": "launch",
+            "mainClass": "Controller.CriaEndereco",
+            "projectName": "SistemPizzaria_c363ec3b"
+        },
+        {
+            "type": "java",
+            "name": "CriaIngredinte",
+            "request": "launch",
+            "mainClass": "Controller.CriaIngredinte",
+            "projectName": "SistemPizzaria_c363ec3b"
+        },
+        {
+            "type": "java",
+            "name": "CriaProduto",
+            "request": "launch",
+            "mainClass": "Controller.CriaProduto",
+            "projectName": "SistemPizzaria_c363ec3b"
+        },
+        {
+            "type": "java",
+            "name": "RecuperarCategoria",
+            "request": "launch",
+            "mainClass": "Controller.RecuperarCategoria",
+            "projectName": "SistemPizzaria_c363ec3b"
+        },
+        {
+            "type": "java",
+            "name": "RecuperarIngrediente",
+            "request": "launch",
+            "mainClass": "Controller.RecuperarIngrediente",
+            "projectName": "SistemPizzaria_c363ec3b"
+        },
+        {
+            "type": "java",
+            "name": "RecuperarProduto",
+            "request": "launch",
+            "mainClass": "Controller.RecuperarProduto",
+            "projectName": "SistemPizzaria_c363ec3b"
+        }
+    ]
+}
