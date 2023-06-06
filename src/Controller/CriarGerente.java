@@ -12,15 +12,7 @@ public class CriarGerente {
 
         Scanner input = new Scanner(System.in);
 
-        /*
-        System.out.println("Informe o nome do gerente: ");
-        String nome = input.nextLine();
-        System.out.println("Informe a senha do funcionario: ");
-        String senha = input.next().toCharArray();
-        System.out.println() */
-        char[] registro ={ '1'};
-
-        Gerente gerente = new Gerente("09371746963","Nicolas",registro,"Nicolas", "senha");
+        Gerente gerente = new Gerente("09371746963","Nicolas","Nicolas", "nicolas", "senha");
 
         try {
             Serializador.gravar("Gerente.ser", gerente);

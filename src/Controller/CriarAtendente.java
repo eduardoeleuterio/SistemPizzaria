@@ -10,18 +10,8 @@ public class CriarAtendente {
 
     public static void main(String[] args){
 
-        Scanner input = new Scanner(System.in);
-
-        /*
-        System.out.println("Informe o nome do gerente: ");
-        String nome = input.nextLine();
-        System.out.println("Informe a senha do funcionario: ");
-        String senha = input.next().toCharArray();
-        System.out.println() */
-        String senha ={ 'a', 'b', 'c', 'd', 'e' };
-        char[] registro ={ '1'};
-
-        Atendente atendente = new Atendente("53592280910","Marcos",registro, "Marcos", senha, 1);
+        Atendente atendente = new Atendente("53592280910","Marcos", "Marcos", "Marcos",
+         "senha", 1);
 
         try {
             Serializador.gravar("Atendente.ser", atendente);
