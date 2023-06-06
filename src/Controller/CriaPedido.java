@@ -18,6 +18,7 @@ import java.time.LocalDate;
 public class CriaPedido {
     public static void main(String[] args){
 
+        
         Cliente cliente = new Cliente("06188144183", "jose", "66554994934");
         Atendente atendente = new Atendente("53592280910","Marcos", "Marcos", "Marcos",
          "senha", 1);
@@ -27,14 +28,18 @@ public class CriaPedido {
         Categoria categoria = new Categoria("bebida");
         ingredientes.add(ingrediente);
         ingredientes.add(ingrediente2);
-        List<ProdutoPedido> produtos = new ArrayList<ProdutoPedido>();
+        List<Produto> produtos = new ArrayList<Produto>();
         Produto produto = new Produto(2,"coca Cola", categoria,10.90, ingredientes ); 
         Endereco endereco = new Endereco("torres", "2", "casa","perto mercado");
         produtos.add(produto);
         Date date = new Date(89432893);
-        
+        Double total = 0.00;
 
-        Pedido pedido = new Pedido(cliente,produtos,atendente,endereco,200.00,date ,1);
+        for (Produto itemProduto : produtos) {
+           total += itemProduto.preco;
+        }
+
+        Pedido pedido = new Pedido(cliente,produtos,atendente,endereco,total,date,0);
         try {
             Serializador.gravar("Pedido.ser", pedido);
             System.out.println("Pedido gravado"+ pedido);

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Pedido implements Serializable {
     public Cliente cliente;
-    public List<ProdutoPedido> produtos;
+    public List<Produto> produtos;
     public Funcionario atendente;
     public Endereco endereco;
     public double valor;
@@ -16,7 +16,7 @@ public class Pedido implements Serializable {
     Calendar calendar = Calendar.getInstance();
     Date date = calendar.getTime();
 
-    public Pedido(Cliente cliente, List<ProdutoPedido> produtos, Funcionario atendente,
+    public Pedido(Cliente cliente, List<Produto> produtos, Funcionario atendente,
                   Endereco endereco,
                   double valor,  Date date,  int status) {
         this.cliente = cliente;
@@ -30,8 +30,8 @@ public class Pedido implements Serializable {
 
     public void exibir() {
         cliente.exibir();
-        for (ProdutoPedido prod : produtos) {
-            prod.exibir();
+        for (Produto produto : produtos) {
+            System.out.println("- " + produto);
         }
         atendente.exibir();
         endereco.exibir();
