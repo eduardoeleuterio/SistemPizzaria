@@ -16,9 +16,9 @@ public class CriarAtendente {
         System.out.println("Informe o nome do gerente: ");
         String nome = input.nextLine();
         System.out.println("Informe a senha do funcionario: ");
-        char[] senha = input.next().toCharArray();
+        String senha = input.next().toCharArray();
         System.out.println() */
-        char[] senha ={ 'a', 'b', 'c', 'd', 'e' };
+        String senha ={ 'a', 'b', 'c', 'd', 'e' };
         char[] registro ={ '1'};
 
         Atendente atendente = new Atendente("53592280910","Marcos",registro, "Marcos", senha, 1);

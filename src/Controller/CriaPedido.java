@@ -1,7 +1,9 @@
 package Controller;
 
+import Model.Atendente;
 import Model.Categoria;
 import Model.Cliente;
+import Model.Endereco;
 import Model.Pedido;
 import Model.ProdutoPedido;
 
@@ -12,10 +14,11 @@ public class CriaPedido {
     public static void main(String[] args){
 
         Cliente cliente = new Cliente("06188144183", "jose", "66554994934");
-        //.... É um código bem longo criando tudo que tem dentro de cada parametro da função...
+        Atendente atendente = new Atendente("06188144183", "Walter", "66554994934", "1,"batatinha1234" );
+        Endereco endereco = new Endereco("floriano peixoto", 1,"perto do mercado");
 
-        // Pedido pedido = new Pedido(cliente, produtos, atendente, endereco, entrega, desconto,
-        //        taxa_entrega, valor, forma_pagamento, troco, data, hora, status);
+        Pedido pedido = new Pedido(cliente, produtos, atendente, endereco, desconto
+                taxa_entrega, valor, forma_pagamento, troco, data, hora, status);
         try {
             Serializador.gravar("Pedido.ser", pedido);
             System.out.println("Pedido gravado"+ pedido);

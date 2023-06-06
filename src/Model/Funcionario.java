@@ -6,11 +6,11 @@ public class Funcionario extends Pessoa implements Serializable {
 
     public String registro;
     public String login;
-    public char[] senha;
+    public String senha;
 
     // Construtor do Funcionario
     public Funcionario(String cpf, String nome, String registro,
-                       String login, char[] senha) {
+                       String login, String senha) {
         super(cpf, nome);
         this.registro = registro;
         this.login = login;
@@ -18,10 +18,7 @@ public class Funcionario extends Pessoa implements Serializable {
     }
 
     public void exibir() {
-        System.out.println("Funcionario: " + cpf + login + " ");
-        for (char c : senha) {
-            System.out.print(c);
-        }
-        System.out.println("");
+        System.out.println("Funcionario: " + cpf + login + senha);
+       
     }
 }
