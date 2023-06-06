@@ -7,14 +7,10 @@ import Model.Endereco;
 import Model.Ingrediente;
 import Model.Pedido;
 import Model.Produto;
-import Model.ProdutoPedido;
-
 import java.io.IOException;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
-
 public class CriaPedido {
     public static void main(String[] args){
 

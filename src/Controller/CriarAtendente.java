@@ -1,11 +1,6 @@
 package Controller;
-
 import Model.Atendente;
-import Model.Gerente;
-
 import java.io.IOException;
-import java.util.Scanner;
-
 public class CriarAtendente {
 
     public static void main(String[] args){

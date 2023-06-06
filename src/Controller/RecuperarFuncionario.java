@@ -1,6 +1,5 @@
 package Controller;
 
-import Model.Categoria;
 import Model.Funcionario;
 
 import java.io.IOException;

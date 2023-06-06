@@ -1,7 +1,6 @@
 package Model;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class Cliente extends Pessoa implements Serializable {
     public String telefone;

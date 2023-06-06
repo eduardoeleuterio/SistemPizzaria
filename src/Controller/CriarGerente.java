@@ -1,8 +1,6 @@
 package Controller;
 
 import Model.Gerente;
-import Model.Ingrediente;
-
 import java.io.IOException;
 import java.util.Scanner;
 
