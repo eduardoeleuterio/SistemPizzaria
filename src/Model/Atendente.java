@@ -8,6 +8,22 @@ public class Atendente extends Funcionario implements Autenticavel{
         super(cpf, nome, registro, login, senha);
         this.ramal = ramal;
     }
+
+    @Override
+    public void exibir(){
+
+        System.out.println("Nome" + nome);
+        System.out.println("CPF" + cpf);
+        System.out.println("Registro" + registro);
+        System.out.println("Login" + login);
+        System.out.println("Senha" + senha);
+        System.out.println("Ramal" + ramal);
+
+    }
+
+
+
+
     public void preparando(Pedido produto) {
         produto.status = 1;
     }

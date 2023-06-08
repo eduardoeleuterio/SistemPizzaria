@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RecuperarAtendente",
+            "request": "launch",
+            "mainClass": "Controller.RecuperarAtendente",
+            "projectName": "SistemPizzaria_5e6465a1"
+        },
+        {
+            "type": "java",
+            "name": "CriarAtendente",
+            "request": "launch",
+            "mainClass": "Controller.CriarAtendente",
+            "projectName": "SistemPizzaria_5e6465a1"
+        },
+        {
+            "type": "java",
+            "name": "RecuperarPedido",
+            "request": "launch",
+            "mainClass": "Controller.RecuperarPedido",
+            "projectName": "SistemPizzaria_5e6465a1"
+        },
+        {
+            "type": "java",
+            "name": "CriaPedido",
+            "request": "launch",
+            "mainClass": "Controller.CriaPedido",
+            "projectName": "SistemPizzaria_5e6465a1"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
