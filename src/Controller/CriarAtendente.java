@@ -5,7 +5,7 @@ public class CriarAtendente {
 
     public static void main(String[] args){
 
-        Atendente atendente = new Atendente("53592280910","Marcos", "Marcos", "Marcos",
+        Atendente atendente = new Atendente("53592280910","Nicolas", "Nicolas", "Nicolas",
          "senha", 1);
 
         try {

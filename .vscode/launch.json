@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CriarAtendente",
+            "request": "launch",
+            "mainClass": "Controller.CriarAtendente",
+            "projectName": "SistemPizzaria_b00f81f1"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
