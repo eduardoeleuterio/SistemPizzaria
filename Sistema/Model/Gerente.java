@@ -1,6 +1,7 @@
 package Sistema.Model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Gerente extends Funcionario implements Serializable {
     private String setor;
@@ -17,4 +18,19 @@ public class Gerente extends Funcionario implements Serializable {
     public void setSetor(String setor) {
         this.setor = setor;
     }
+
+    public void MudarStatusPedido(Pedido pedido, int novoStatus){
+        pedido.setStatus(novoStatus);
+    }
+
+    public void deletarPedido(List<Pedido> pedidos, int codigo){
+        for(Pedido pedido: pedidos){
+            if(pedido.getCodigo() == codigo){
+                pedidos.remove(pedido);
+            }
+        }
+    }
 }
+
+
+

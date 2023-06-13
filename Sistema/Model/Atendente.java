@@ -9,11 +9,15 @@ public class Atendente extends Funcionario implements Serializable {
     }
 }
 
-public void criarPedido(Cliente cliente, List<Produto> produtos, Funcionario funcionario, Endereco endereco){
+public void criarPedido(Cliente cliente, List<Produto> produtos, Funcionario funcionario, Endereco endereco,List<Pedido> pedidos){
     if(funcionario instanceof Atendente ){
-        Pedido.criarPedido(cliente, produtos, funcionario, endereco);
-        } else{
-            System.out.println("apenas atendentes podem criar pedidos");
+        for(Pedido pedido: pedidos){
+          if(pedido.getCodigo() == null){
+            Pedido pedido = new Pedido(cliente, produtos, atendente, endereco, status); 
+            }
+        }  
+
         }
-}
+        
+        
 

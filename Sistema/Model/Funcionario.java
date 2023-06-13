@@ -27,4 +27,9 @@ public class Funcionario extends Pessoa implements Serializable {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public void MudarStatusPedido(Pedido pedido, int novoStatus){
+        pedido.setStatus(novoStatus);
+
+    }
 }
