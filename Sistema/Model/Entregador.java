@@ -17,4 +17,9 @@ public class Entregador extends Funcionario implements Serializable {
     public void setVeiculo(String veiculo) {
         this.veiculo = veiculo;
     }
+
+    public void MudarStatusPedido(Pedido pedido, int novoStatus){
+        pedido.setStatus(novoStatus);
+
+    }
 }
