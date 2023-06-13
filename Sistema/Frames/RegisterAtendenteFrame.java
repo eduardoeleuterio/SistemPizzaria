@@ -71,7 +71,7 @@ public class RegisterAtendenteFrame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         pack(); // Adjust the frame size based on the components
         setLocationRelativeTo(null); // Center the frame on the screen
-        setSize(400, 300);
+        setSize(600, 450);
         setVisible(true);
     }
 

@@ -37,6 +37,7 @@ public class OpcoesRegistroFrame extends JFrame {
         registrarAtendenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();f
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new RegisterAtendenteFrame();
@@ -48,6 +49,7 @@ public class OpcoesRegistroFrame extends JFrame {
         registrarEntregadorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new RegisterEntregadorFrame();
@@ -59,6 +61,7 @@ public class OpcoesRegistroFrame extends JFrame {
         registrarGerenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new RegisterGerenteFrame();
@@ -83,7 +86,7 @@ public class OpcoesRegistroFrame extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         pack(); // Adjust the frame size based on the components
         setLocationRelativeTo(null); // Center the frame on the screen
-        setSize(400, 300);
+        setSize(600, 450);
         setVisible(true);
     }
 }

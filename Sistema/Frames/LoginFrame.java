@@ -51,9 +51,13 @@ public class LoginFrame extends JFrame {
 
                 // AQUI VALIDA O QUE FOI INSERIDO NO LOGIN E SENHA
                 /*
-                .
-                .
-                .
+
+
+
+
+
+
+
                  */
 
                 // Clear the fields after confirming
@@ -71,7 +75,6 @@ public class LoginFrame extends JFrame {
                     public void run() {
                         JFrame registerFrame = new OpcoesRegistroFrame();
                         registerFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                        registerFrame.setSize(400, 300);
                         registerFrame.setLocationRelativeTo(null); // Center the frame on the screen
                         registerFrame.setVisible(true);
                     }
@@ -83,7 +86,7 @@ public class LoginFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack(); // Adjust the frame size based on the components
         setLocationRelativeTo(null); // Center the frame on the screen
-        setSize(400, 300);
+        setSize(600, 450);
         setVisible(true);
     }
 }
