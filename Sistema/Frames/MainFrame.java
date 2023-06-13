@@ -68,6 +68,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack(); // Adjust the frame size based on the components
         setLocationRelativeTo(null); // Center the frame on the screen
+        setSize(400, 300);
         setVisible(true);
     }
 }
