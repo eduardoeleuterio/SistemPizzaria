@@ -37,7 +37,7 @@ public class OpcoesRegistroFrame extends JFrame {
         registrarAtendenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();f
+                dispose();
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         new RegisterAtendenteFrame();
