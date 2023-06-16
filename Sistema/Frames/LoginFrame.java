@@ -69,7 +69,7 @@ public class LoginFrame extends JFrame {
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Abre novo Frame
+                dispose();
 
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
