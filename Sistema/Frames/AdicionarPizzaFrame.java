@@ -84,5 +84,6 @@ public class AdicionarPizzaFrame extends JFrame {
         add(panelProduto);
         add(btnAdicionar);
     }
+    
 }
 
