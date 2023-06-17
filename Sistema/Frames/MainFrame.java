@@ -1,5 +1,9 @@
 package Sistema.Frames;
 
+import Sistema.Frames.AdicionarPizzaFrame;
+import Sistema.Frames.AlterarStatusFrame;
+import Sistema.Frames.CriarPedidoFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,38 +25,67 @@ public class MainFrame extends JFrame {
         JButton salvarESairButton = new JButton("Salvar e Sair");
 
         // Set the layout manager for the frame
-        setLayout(new BorderLayout());
+        setLayout(new GridBagLayout());
 
         // Create a panel for the buttons
-        JPanel buttonPanel = new JPanel(new FlowLayout());
-        buttonPanel.add(criarPedidoButton);
-        buttonPanel.add(alterarStatusButton);
-        buttonPanel.add(adicionarPizzaButton);
-        buttonPanel.add(salvarESairButton);
+        JPanel buttonPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.insets = new Insets(10, 10, 10, 10); // Add some spacing between buttons
+
+        // Set the same size for all buttons
+        Dimension buttonSize = new Dimension(200, 40);
+        criarPedidoButton.setPreferredSize(buttonSize);
+        alterarStatusButton.setPreferredSize(buttonSize);
+        adicionarPizzaButton.setPreferredSize(buttonSize);
+        salvarESairButton.setPreferredSize(buttonSize);
+
+        buttonPanel.add(criarPedidoButton, gbc);
+
+        gbc.gridx = 1;
+        buttonPanel.add(alterarStatusButton, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        buttonPanel.add(adicionarPizzaButton, gbc);
+
+        gbc.gridx = 1;
+        buttonPanel.add(salvarESairButton, gbc);
 
         // Add the components to the frame
-        add(titleLabel, BorderLayout.NORTH);
-        add(buttonPanel, BorderLayout.CENTER);
+        GridBagConstraints frameGbc = new GridBagConstraints();
+        frameGbc.gridx = 0;
+        frameGbc.gridy = 0;
+        frameGbc.anchor = GridBagConstraints.CENTER;
+        frameGbc.insets = new Insets(10, 10, 10, 10); // Add some spacing around the components
+        add(titleLabel, frameGbc);
+
+        frameGbc.gridy = 1;
+        add(buttonPanel, frameGbc);
 
         // Set the action listeners for the buttons
         criarPedidoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implement the action for "Criar pedido" button here
+                dispose();
+                CriarPedidoFrame criarPedidoFrame = new CriarPedidoFrame();
             }
         });
 
         alterarStatusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implement the action for "Alterar Status do Pedido" button here
+                dispose();
+                AlterarStatusFrame alterarStatusFrame = new AlterarStatusFrame();
             }
         });
 
         adicionarPizzaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implement the action for "Adicionar Pizza" button here
+                dispose();
+                AdicionarPizzaFrame adicionarPizzaFrame = new AdicionarPizzaFrame();
             }
         });
 

@@ -1,5 +1,7 @@
 package Sistema.Frames;
 
+import Sistema.Controller.AtendenteController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,8 +9,12 @@ import java.awt.event.ActionListener;
 
 public class RegisterAtendenteFrame extends JFrame {
 
+    AtendenteController atendenteController;
+
     public RegisterAtendenteFrame() {
         super("Registrar Atendente"); // Set the title
+
+        atendenteController = new AtendenteController();
 
         // Create the text fields
         JTextField cpfField = new JTextField(15);
@@ -57,7 +63,8 @@ public class RegisterAtendenteFrame extends JFrame {
                 char[] senhaChars = senhaField.getPassword();
                 String senha = new String(senhaChars);
 
-                // TODO: Perform registration logic with the provided data
+                // CRIAR O ATENDENTE
+                atendenteController.criarAtendente(cpf, nome, login, senha);
 
                 // Clear the fields after registering
                 cpfField.setText("");

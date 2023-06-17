@@ -1,5 +1,7 @@
 package Sistema.Frames;
 
+import Sistema.Controller.EntregadorController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,8 +9,12 @@ import java.awt.event.ActionListener;
 
 public class RegisterEntregadorFrame extends JFrame {
 
+    EntregadorController entregadorController;
+
     public RegisterEntregadorFrame() {
         super("Registrar Entregador"); // Set the title
+
+        entregadorController = new EntregadorController();
 
         // Create the text fields
         JTextField cpfField = new JTextField(15);
@@ -64,14 +70,7 @@ public class RegisterEntregadorFrame extends JFrame {
                 String veiculo = veiculoField.getText();
 
                 // EXECUTAR VALIDAÇÃO E REGISTTRO AQUI
-                /*
-
-
-
-
-
-
-                 */
+                entregadorController.criarEntregador(cpf, nome, login, senha, veiculo);
 
                 // Clear the fields after registering
                 cpfField.setText("");

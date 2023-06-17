@@ -1,5 +1,7 @@
 package Sistema.Frames;
 
+import Sistema.Controller.GerenteController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,8 +9,12 @@ import java.awt.event.ActionListener;
 
 public class RegisterGerenteFrame extends JFrame {
 
+    GerenteController gerenteController;
+
     public RegisterGerenteFrame() {
         super("Registrar Gerente"); // Set the title
+
+        gerenteController = new GerenteController();
 
         // Create the text fields
         JTextField cpfField = new JTextField(15);
@@ -64,14 +70,7 @@ public class RegisterGerenteFrame extends JFrame {
                 String setor = setorField.getText();
 
                 // EXECUTAR VALIDAÇÃO E REGISTTRO AQUI
-                /*
-
-
-
-
-
-
-                 */
+                gerenteController.criarGerente(cpf, nome, login, senha, setor);
 
                 // Clear the fields after registering
                 cpfField.setText("");
