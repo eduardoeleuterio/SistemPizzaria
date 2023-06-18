@@ -59,6 +59,14 @@ public class CriarPedidoFrame extends JFrame {
             }
         });
 
+        listaProdutosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                ListaProdutosButton listaprodutos = new ListaProdutosButton();
+            }
+        });
+
         // Set the frame properties
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
