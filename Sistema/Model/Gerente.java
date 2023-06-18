@@ -2,7 +2,6 @@ package Sistema.Model;
 
 import java.io.Serializable;
 import java.util.List;
-import Sistema.Controller.EntregadorController;
 
 public class Gerente extends Funcionario implements Serializable {
     private String setor;
@@ -20,31 +19,18 @@ public class Gerente extends Funcionario implements Serializable {
         this.setor = setor;
     }
 
-    public void MudarStatusPedido(Pedido pedido, int novoStatus){
+    public void MudarStatusPedido(Pedido pedido, int novoStatus) {
         pedido.setStatus(novoStatus);
     }
 
-    public void deletarPedido(List<Pedido> pedidos, int codigo){
-        for(Pedido pedido: pedidos){
-            if(pedido.getCodigo() == codigo){
+    public void deletarPedido(List<Pedido> pedidos, int codigo) {
+        for (Pedido pedido : pedidos) {
+            if (pedido.getCodigo() == codigo) {
                 pedidos.remove(pedido);
+                break; 
             }
         }
     }
+    
 
-
-    public void deletarFuncionarios(Entregador funcionario, String cpf)
-    {
-        if(funcionario instanceof Atendente)
-        {
-            funcionario.deletarAtendente(cpf);
-        }
-        else if(funcionario instanceof Entregador)
-        {
-            funcionario.deletarEntregador(cpf);
-        }
-    }
 }
-
-
-

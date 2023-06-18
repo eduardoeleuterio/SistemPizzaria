@@ -22,7 +22,7 @@ public class IngredienteController {
 
     public Ingrediente lerIngrediente(String nome) {
         for (Ingrediente ingrediente : ingredientes) {
-            if (ingrediente.nome.equals(nome)) {
+            if (ingrediente.getNome().equals(nome)) {
                 return ingrediente;
             }
         }
@@ -32,7 +32,7 @@ public class IngredienteController {
     public void atualizarIngrediente(String nome, String novoNome) {
         Ingrediente ingrediente = lerIngrediente(nome);
         if (ingrediente != null) {
-            ingrediente.nome = novoNome;
+            ingrediente.setNome(novoNome);
             salvarIngredientes();
         }
     }

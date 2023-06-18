@@ -1,6 +1,4 @@
-package Sistema.Frames;
 
-import Sistema.Frames.LoginFrame;
 
 import javax.swing.*;
 import java.awt.*;

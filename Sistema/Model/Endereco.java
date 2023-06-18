@@ -2,44 +2,48 @@ package Sistema.Model;
 
 import java.io.Serializable;
 
-public class Endereco implements Serializable{
-    public String rua;
-    public String numero;
-    public String complemento;
-    public String referencia;
+public class Endereco implements Serializable {
+    private String rua;
+    private String numero;
+    private String complemento;
+    private String referencia;
 
-    public Endereco(String rua, String numero, String complemento, String referencia){
+    public Endereco(String rua, String numero, String complemento, String referencia) {
         this.rua = rua;
-        this.numero= numero;
+        this.numero = numero;
         this.complemento = complemento;
         this.referencia = referencia;
     }
 
-    public void setNumero(String novoNumero) {
+    public void setRua(String novaRua) {
+        this.rua = novaRua;
     }
 
-    public void setRua(String novaRua) {
+    public void setNumero(String novoNumero) {
+        this.numero = novoNumero;
     }
 
     public void setComplemento(String novoComplemento) {
+        this.complemento = novoComplemento;
     }
 
     public void setReferencia(String novaReferencia) {
+        this.referencia = novaReferencia;
     }
 
     public String getRua() {
-        return null;
+        return rua;
     }
 
     public String getNumero() {
-        return null;
+        return numero;
     }
 
     public String getComplemento() {
-        return null;
+        return complemento;
     }
 
     public String getReferencia() {
-        return null;
+        return referencia;
     }
 }

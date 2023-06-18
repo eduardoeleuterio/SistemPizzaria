@@ -1,0 +1,49 @@
+import javax.swing.*;
+import java.awt.*;
+import java.util.List;
+import Sistema.Controller.ProdutoController;
+import Sistema.Model.Produto;
+
+public class VisualizarProdutosFrame extends JFrame {
+    private JList<String> produtosList;
+    private DefaultListModel<String> produtosListModel;
+    private JScrollPane scrollPane;
+
+    private ProdutoController produtoController;
+
+    public VisualizarProdutosFrame() {
+        super("Visualizar Produtos");
+
+        produtoController = new ProdutoController();
+
+        // Create components
+        produtosListModel = new DefaultListModel<>();
+        produtosList = new JList<>(produtosListModel);
+        scrollPane = new JScrollPane(produtosList);
+
+        // Set the layout manager
+        setLayout(new BorderLayout());
+
+        // Set the preferred size for the scroll pane
+        scrollPane.setPreferredSize(new Dimension(300, 400));
+
+        // Add the scroll pane to the frame
+        add(scrollPane, BorderLayout.CENTER);
+
+        // Set the frame properties
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
+
+        // Load and display the products
+        loadProducts();
+    }
+
+    private void loadProducts() {
+        List<Produto> produtos = produtoController.getProdutos();
+        for (Produto produto : produtos) {
+            produtosListModel.addElement(produto.toString());
+        }
+    }
+}

@@ -1,4 +1,3 @@
-package Sistema.Frames;
 
 import javax.swing.*;
 import java.awt.*;

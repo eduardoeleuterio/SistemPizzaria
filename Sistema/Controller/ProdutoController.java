@@ -22,7 +22,7 @@ public class ProdutoController {
 
     public Produto lerProduto(int codigo) {
         for (Produto produto : produtos) {
-            if (produto.codigo == codigo) {
+            if (produto.getCodigo() == codigo) {
                 return produto;
             }
         }
@@ -32,9 +32,9 @@ public class ProdutoController {
     public void atualizarProduto(int codigo, String novoNome, double novoPreco, List<Ingrediente> novosIngredientes) {
         Produto produto = lerProduto(codigo);
         if (produto != null) {
-            produto.nome = novoNome;
-            produto.preco = novoPreco;
-            produto.ingredientes = novosIngredientes;
+            produto.setNome(novoNome);
+            produto.setPreco(novoPreco);
+            produto.setIngredientes(novosIngredientes);
             salvarProdutos();
         }
     }

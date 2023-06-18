@@ -37,10 +37,10 @@ public class EnderecoTeste {
 
     private static void exibirEndereco(Endereco endereco) {
         if (endereco != null) {
-            System.out.println("Rua: " + endereco.rua);
-            System.out.println("Número: " + endereco.numero);
-            System.out.println("Complemento: " + endereco.complemento);
-            System.out.println("Referência: " + endereco.referencia);
+            System.out.println("Rua: " + endereco.getRua());
+            System.out.println("Número: " + endereco.getNumero());
+            System.out.println("Complemento: " + endereco.getComplemento());
+            System.out.println("Referência: " + endereco.getReferencia());
         } else {
             System.out.println("Endereço não encontrado.");
         }

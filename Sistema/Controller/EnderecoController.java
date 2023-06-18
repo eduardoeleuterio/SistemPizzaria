@@ -22,7 +22,7 @@ public class EnderecoController {
 
     public Endereco lerEndereco(String rua, String numero) {
         for (Endereco endereco : enderecos) {
-            if (endereco.rua.equals(rua) && endereco.numero.equals(numero)) {
+            if (endereco.getRua().equals(rua) && endereco.getNumero().equals(numero)) {
                 return endereco;
             }
         }
@@ -32,8 +32,8 @@ public class EnderecoController {
     public void atualizarEndereco(String rua, String numero, String novoComplemento, String novaReferencia) {
         Endereco endereco = lerEndereco(rua, numero);
         if (endereco != null) {
-            endereco.complemento = novoComplemento;
-            endereco.referencia = novaReferencia;
+            endereco.setComplemento(novoComplemento);
+            endereco.setReferencia(novaReferencia);
             salvarEnderecos();
         }
     }

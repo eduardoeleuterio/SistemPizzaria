@@ -26,43 +26,43 @@ public class ProdutoTeste {
         Produto produto2 = new Produto(2, "Pizza Quatro Queijos", 35.0, ingredientes2);
 
         // Adicionar produtos
-        produtoController.criarProduto(produto1.codigo, produto1.nome, produto1.preco, produto1.ingredientes);
-        produtoController.criarProduto(produto2.codigo, produto2.nome, produto2.preco, produto2.ingredientes);
+        produtoController.criarProduto(produto1.getCodigo(), produto1.getNome(), produto1.getPreco(), produto1.getIngredientes());
+        produtoController.criarProduto(produto2.getCodigo(), produto2.getNome(), produto2.getPreco(), produto2.getIngredientes());
 
         // Ler produtos
         System.out.println("===== Ler Produto =====");
-        Produto produtoLido1 = produtoController.lerProduto(produto1.codigo);
-        Produto produtoLido2 = produtoController.lerProduto(produto2.codigo);
+        Produto produtoLido1 = produtoController.lerProduto(produto1.getCodigo());
+        Produto produtoLido2 = produtoController.lerProduto(produto2.getCodigo());
         exibirProduto(produtoLido1);
         exibirProduto(produtoLido2);
 
         // Atualizar produtos
         List<Ingrediente> novosIngredientes = new ArrayList<>();
         novosIngredientes.add(ingrediente2);
-        produtoController.atualizarProduto(produto1.codigo, "Nova Pizza", 40.0, novosIngredientes);
+        produtoController.atualizarProduto(produto1.getCodigo(), "Nova Pizza", 40.0, novosIngredientes);
 
         // Ler produtos após atualização
         System.out.println("===== Ler Produto após atualização =====");
-        produtoLido1 = produtoController.lerProduto(produto1.codigo);
+        produtoLido1 = produtoController.lerProduto(produto1.getCodigo());
         exibirProduto(produtoLido1);
 
         // Deletar produtos
-        produtoController.deletarProduto(produto2.codigo);
+        produtoController.deletarProduto(produto2.getCodigo());
 
         // Ler produtos após exclusão
         System.out.println("===== Ler Produto após exclusão =====");
-        produtoLido2 = produtoController.lerProduto(produto2.codigo);
+        produtoLido2 = produtoController.lerProduto(produto2.getCodigo());
         exibirProduto(produtoLido2);
     }
 
     private static void exibirProduto(Produto produto) {
         if (produto != null) {
-            System.out.println("Código: " + produto.codigo);
-            System.out.println("Nome: " + produto.nome);
-            System.out.println("Preço: " + produto.preco);
+            System.out.println("Código: " + produto.getCodigo());
+            System.out.println("Nome: " + produto.getNome());
+            System.out.println("Preço: " + produto.getPreco());
             System.out.println("Ingredientes:");
-            for (Ingrediente ingrediente : produto.ingredientes) {
-                System.out.println("- " + ingrediente.nome);
+            for (Ingrediente ingrediente : produto.getIngredientes()) {
+                System.out.println("- " + ingrediente.getNome());
             }
         } else {
             System.out.println("Produto não encontrado.");

@@ -37,7 +37,7 @@ public class IngredienteTeste {
 
     private static void exibirIngrediente(Ingrediente ingrediente) {
         if (ingrediente != null) {
-            System.out.println("Nome: " + ingrediente.nome);
+            System.out.println("Nome: " + ingrediente.getNome());
         } else {
             System.out.println("Ingrediente não encontrado.");
         }

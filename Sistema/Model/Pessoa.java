@@ -3,8 +3,8 @@ package Sistema.Model;
 import java.io.Serializable;
 
 public class Pessoa implements Serializable {
-    public String cpf;
-    public String nome;
+    private String cpf;
+    private String nome;
 
     public Pessoa(String cpf, String nome) {
         this.cpf = cpf;

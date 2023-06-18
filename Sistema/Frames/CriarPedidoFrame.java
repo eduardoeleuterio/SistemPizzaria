@@ -1,24 +1,32 @@
-package Sistema.Frames;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Sistema.Controller.*;
+import Sistema.Model.*;
 
 public class CriarPedidoFrame extends JFrame {
     private JButton clientesButton;
     private JButton listaProdutosButton;
-    private JTextField enderecoTextField;
+    private JTextField cpfTextField;
+    private JTextField idProdutoTextField;
     private JButton confirmarButton;
     private JButton sairButton;
+
+    private ClienteController clienteController;
+    private ProdutoController produtoController;
 
     public CriarPedidoFrame() {
         super("Criar Pedido");
 
+        clienteController = new ClienteController();
+        produtoController = new ProdutoController();
+
         // Create components
         clientesButton = new JButton("Selecionar Cliente");
         listaProdutosButton = new JButton("Selecionar Produtos");
-        enderecoTextField = new JTextField(20);
+        cpfTextField = new JTextField(20);
+        idProdutoTextField = new JTextField(20);
         confirmarButton = new JButton("Confirmar Pedido");
         sairButton = new JButton("Sair");
 
@@ -33,10 +41,12 @@ public class CriarPedidoFrame extends JFrame {
         gbc.insets = new Insets(10, 10, 10, 10);
 
         // Add components to the frame
+        add(new JLabel("CPF:"), gbc);
+        add(cpfTextField, gbc);
         add(clientesButton, gbc);
+        add(new JLabel("ID Produto:"), gbc);
+        add(idProdutoTextField, gbc);
         add(listaProdutosButton, gbc);
-        add(new JLabel("Endereço:"), gbc);
-        add(enderecoTextField, gbc);
         add(confirmarButton, gbc);
 
         // Create constraints for the "Sair" button
@@ -46,7 +56,8 @@ public class CriarPedidoFrame extends JFrame {
 
         // Set the same size for input components
         Dimension inputSize = new Dimension(200, 30);
-        enderecoTextField.setPreferredSize(inputSize);
+        cpfTextField.setPreferredSize(inputSize);
+        idProdutoTextField.setPreferredSize(inputSize);
 
         // Set the action listener for the "Sair" button
         sairButton.addActionListener(new ActionListener() {
@@ -64,6 +75,40 @@ public class CriarPedidoFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 ListaProdutosButton listaprodutos = new ListaProdutosButton();
+            }
+        });
+
+        clientesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String cpf = cpfTextField.getText();
+                Cliente cliente = clienteController.lerCliente(cpf);
+                if (cliente != null) {
+                    // Exibir informações do cliente ou realizar ação desejada
+                    JOptionPane.showMessageDialog(CriarPedidoFrame.this, "Cliente selecionado: " + cliente.getNome());
+                } else {
+                    // Cliente não encontrado
+                    JOptionPane.showMessageDialog(CriarPedidoFrame.this, "Cliente não encontrado");
+                }
+            }
+        });
+
+        confirmarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String cpf = cpfTextField.getText();
+                int idProduto = Integer.parseInt(idProdutoTextField.getText());
+
+                Cliente cliente = clienteController.lerCliente(cpf);
+                Produto produto = produtoController.lerProduto(idProduto);
+
+                if (cliente != null && produto != null) {
+                    // Código para confirmar o pedido com o cliente e produto selecionados
+                    JOptionPane.showMessageDialog(CriarPedidoFrame.this, "Pedido confirmado: Cliente = " + cliente.getNome() + ", Produto = " + produto.getNome());
+                } else {
+                    // Cliente ou produto não encontrado
+                    JOptionPane.showMessageDialog(CriarPedidoFrame.this, "Cliente ou produto não encontrado");
+                }
             }
         });
 

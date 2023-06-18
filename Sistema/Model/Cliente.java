@@ -27,4 +27,6 @@ public class Cliente extends Pessoa implements Serializable {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    
+
 }

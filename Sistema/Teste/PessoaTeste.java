@@ -38,8 +38,8 @@ public class PessoaTeste {
 
     private static void exibirPessoa(Pessoa pessoa) {
         if (pessoa != null) {
-            System.out.println("CPF: " + pessoa.cpf);
-            System.out.println("Nome: " + pessoa.nome);
+            System.out.println("CPF: " + pessoa.getCpf());
+            System.out.println("Nome: " + pessoa.getNome());
         } else {
             System.out.println("Pessoa não encontrada.");
         }
