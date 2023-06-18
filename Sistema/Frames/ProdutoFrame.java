@@ -75,4 +75,7 @@ public class ProdutoFrame extends JFrame {
             }
         });
     }
+
+    public void carregarProdutos() {
+    }
 }
