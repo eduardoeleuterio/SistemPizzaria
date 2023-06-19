@@ -11,7 +11,7 @@ public class FuncionarioTeste {
         funcionarioController.criarFuncionario("12345678901", "João", "joao123", "senha123");
         funcionarioController.criarFuncionario("98765432109", "Maria", "maria456", "senha456");
 
-        // Teste de leitura de funcionário
+        // Teste de leitura de funcionário.
         System.out.println("===== Ler Funcionário =====");
         Funcionario funcionario1 = funcionarioController.lerFuncionario("12345678901");
         Funcionario funcionario2 = funcionarioController.lerFuncionario("98765432109");
@@ -21,7 +21,7 @@ public class FuncionarioTeste {
         // Teste de atualização de funcionário.
         funcionarioController.atualizarFuncionario("12345678901", "João da Silva", "joaosilva", "novasenha");
 
-        // Teste de leitura após atualização
+        // Teste de leitura após atualização.
         System.out.println("===== Ler Funcionário após atualização =====");
         funcionario1 = funcionarioController.lerFuncionario("12345678901");
         exibirFuncionario(funcionario1);
@@ -29,7 +29,7 @@ public class FuncionarioTeste {
         // Teste de exclusão de funcionário.
         funcionarioController.deletarFuncionario("98765432109");
 
-        // Teste de leitura após exclusão
+        // Teste de leitura após exclusão.
         System.out.println("===== Ler Funcionário após exclusão =====");
         funcionario2 = funcionarioController.lerFuncionario("98765432109");
         exibirFuncionario(funcionario2);
