@@ -29,7 +29,7 @@ public class ClienteController {
                 return cliente;
             }
         }
-        return null; // Cliente não encontrado
+        return null; // Cliente não encontrado.
     }
 
     public void atualizarCliente(String cpf, String novoNome, String novaRua, String novoNumero, String novoComplemento, String novaReferencia, String novoTelefone) {
