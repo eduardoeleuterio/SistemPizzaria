@@ -65,7 +65,7 @@ public class AtendenteController {
         try {
             Serializador.gravar(ARQUIVO_ATENDENTES, atendentes);
         } catch (IOException e) {
-            // Tratar exceção adequadamente
+            // Tratar exceção adequadamente.
             e.printStackTrace();
         }
     }
