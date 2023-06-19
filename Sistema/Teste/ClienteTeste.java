@@ -24,10 +24,10 @@ public class ClienteTeste {
         cliente = clienteController.lerCliente("12345678901");
         exibirCliente(cliente);
 
-        // Teste de exclusão de cliente
+        // Teste de exclusão de cliente   
         clienteController.deletarCliente("12345678901");
 
-        // Teste de leitura após exclusão
+        // Teste de leitura após exclusão    
         System.out.println("===== Ler Cliente após exclusão =====");
         cliente = clienteController.lerCliente("12345678901");
         exibirCliente(cliente);
