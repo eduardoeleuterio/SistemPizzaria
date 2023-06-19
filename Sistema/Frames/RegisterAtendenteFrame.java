@@ -1,7 +1,8 @@
 package Sistema.Frames;
 
 import Sistema.Controller.AtendenteController;
-
+import Sistema.Model.*;
+import Sistema.Controller.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
