@@ -1,44 +1,45 @@
-/*
+package Sistema.Frames;
+
+import javax.swing.*;
+import java.awt.*;
 import Sistema.Model.Produto;
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import Sistema.Controller.*;
 
-import javax.swing.text.html.ListView;
+import java.util.ArrayList;
+import java.util.List;
 
-public class VisualizarProdutos extends Application {
+public class VisualizarProdutos extends JFrame {
+    private JList<Produto> listaProdutos;
+    private DefaultListModel<Produto> listModel;
 
-    private ProdutoController produtoController;
-    private ObservableList<Produto> produtosObservableList;
-    private ListView<Produto> produtosListView;
+    public VisualizarProdutos(List<Produto> produtos) {
+        setTitle("Produtos Registrados");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 300);
 
-    @Override
-    public void start(Stage primaryStage) {
-        produtoController = new ProdutoController();
+        listModel = new DefaultListModel<>();
+        for (Produto produto : produtos) {
+            listModel.addElement(produto);
+        }
 
-        VBox root = new VBox();
-        root.setPadding(new Insets(10));
-        root.setSpacing(10);
+        listaProdutos = new JList<>(listModel);
 
-        produtosObservableList = FXCollections.observableArrayList(produtoController.getProdutos());
+        JScrollPane scrollPane = new JScrollPane(listaProdutos);
+        getContentPane().add(scrollPane, BorderLayout.CENTER);
+    }
 
-        produtosListView = new ListView<>(produtosObservableList);
-        root.getChildren().add(produtosListView);
-
-        Scene scene = new Scene(root, 400, 300);
-        primaryStage.setTitle("Produtos Registrados");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    public void atualizarListaProdutos(List<Produto> produtos) {
+        listModel.clear();
+        for (Produto produto : produtos) {
+            listModel.addElement(produto);
+        }
     }
 
     public static void main(String[] args) {
-        launch(args);
+        SwingUtilities.invokeLater(() -> {
+            List<Produto> produtos = new ArrayList<>(); // Adicione os produtos aqui
+
+            VisualizarProdutos produtoView = new VisualizarProdutos(produtos);
+            produtoView.setVisible(true);
+        });
     }
 }
- */
