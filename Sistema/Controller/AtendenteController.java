@@ -56,7 +56,7 @@ public class AtendenteController {
                 atendentes = (List<Atendente>) objeto;
             }
         } catch (IOException | ClassNotFoundException e) {
-            // Tratar exceção adequadamente
+            // Tratar exceção adequadamente.
             e.printStackTrace();
         }
     }
