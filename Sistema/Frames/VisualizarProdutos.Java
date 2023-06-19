@@ -1,3 +1,5 @@
+/*
+import Sistema.Model.Produto;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,6 +9,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import Sistema.Controller.*;
+
+import javax.swing.text.html.ListView;
 
 public class VisualizarProdutos extends Application {
 
@@ -37,3 +41,4 @@ public class VisualizarProdutos extends Application {
         launch(args);
     }
 }
+ */

@@ -1,3 +1,5 @@
+package Sistema.Frames;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -5,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import Sistema.Controller.*;
+import Sistema.Frames.ProdutoFrame;
 import Sistema.Model.*;
 
 public class ListaProdutosButton extends JFrame {

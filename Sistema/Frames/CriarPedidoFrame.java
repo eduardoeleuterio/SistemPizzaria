@@ -1,8 +1,11 @@
+package Sistema.Frames;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Sistema.Controller.*;
+import Sistema.Frames.ListaProdutosButton;
 import Sistema.Model.*;
 
 public class CriarPedidoFrame extends JFrame {
@@ -65,8 +68,8 @@ public class CriarPedidoFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Close the current frame and show the main frame
                 dispose();
-                MainFrame mainFrame = new MainFrame();
-                mainFrame.setVisible(true);
+                //MainFrame mainFrame = new MainFrame();
+                //mainFrame.setVisible(true);
             }
         });
 

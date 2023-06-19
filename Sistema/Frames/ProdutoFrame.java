@@ -1,3 +1,5 @@
+package Sistema.Frames;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -56,7 +58,7 @@ public class ProdutoFrame extends JFrame {
         String nome = nomeTextField.getText();
         double preco = Double.parseDouble(precoTextField.getText());
 
-        produtoController.criarProduto(codigo, nome, preco);
+        //produtoController.criarProduto(codigo, nome, preco, ingredientes);
 
         JOptionPane.showMessageDialog(this, "Produto adicionado com sucesso!");
 
