@@ -12,7 +12,7 @@ public class AtendenteController {
     public AtendenteController() {
         // Inicializa a lista de atendentes.
         atendentes = new ArrayList<>();
-        // Carrega os dados do arquivo, se existir
+        // Carrega os dados do arquivo, se existir.
         carregarAtendentes();
     }
 
