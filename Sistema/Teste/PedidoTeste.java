@@ -16,11 +16,11 @@ public class PedidoTeste {
     public static void main(String[] args) {
         PedidoController pedidoController = new PedidoController();
 
-        // Criação dos ingredientes
+        // Criação dos ingredientes 
         Ingrediente ingrediente1 = new Ingrediente("Queijo");
         Ingrediente ingrediente2 = new Ingrediente("Presunto");
 
-        // Criação dos produtos
+        // Criação dos produtos 
         List<Ingrediente> ingredientes1 = new ArrayList<>();
         ingredientes1.add(ingrediente1);
         Produto produto1 = new Produto(1, "Pizza Margherita", 30.0, ingredientes1);
@@ -30,7 +30,7 @@ public class PedidoTeste {
         ingredientes2.add(ingrediente2);
         Produto produto2 = new Produto(2, "Pizza Quatro Queijos", 35.0, ingredientes2);
 
-        // Criação do cliente
+        // Criação do cliente 
         String cpf = "12345678901";
         String nome = "João";
         String rua = "Rua A";
@@ -41,18 +41,18 @@ public class PedidoTeste {
         Endereco endereco = new Endereco(rua, numero, complemento, referencia);
         Cliente cliente = new Cliente(cpf, nome, endereco, telefone);
 
-        // Criação do atendente
+        // Criação do atendente 
         String login = "atendente";
         String senha = "senha";
         Funcionario atendente = new Funcionario(cpf, nome, login, senha);
 
-        // Criação do pedido
+        // Criação do pedido 
         List<Produto> produtos = new ArrayList<>();
         produtos.add(produto1);
         produtos.add(produto2);
         Pedido pedido = new Pedido(cliente, produtos, atendente, endereco, 0);
 
-        // Chamada para criar e salvar o pedido no controlador
+        // Chamada para criar e salvar o pedido no controlador 
         pedidoController.criarPedido(pedido.getCliente(), pedido.getProdutos(), pedido.getAtendente(), pedido.getEndereco());
 
         // Exibição dos dados do pedido
