@@ -18,7 +18,7 @@ public class FuncionarioTeste {
         exibirFuncionario(funcionario1);
         exibirFuncionario(funcionario2);
 
-        // Teste de atualização de funcionário
+        // Teste de atualização de funcionário.
         funcionarioController.atualizarFuncionario("12345678901", "João da Silva", "joaosilva", "novasenha");
 
         // Teste de leitura após atualização
@@ -26,7 +26,7 @@ public class FuncionarioTeste {
         funcionario1 = funcionarioController.lerFuncionario("12345678901");
         exibirFuncionario(funcionario1);
 
-        // Teste de exclusão de funcionário
+        // Teste de exclusão de funcionário.
         funcionarioController.deletarFuncionario("98765432109");
 
         // Teste de leitura após exclusão
