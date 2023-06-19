@@ -27,7 +27,7 @@ public class FuncionarioController {
                 return funcionario;
             }
         }
-        return null; // Funcionário não encontrado
+        return null; // Funcionário não encontrado.
     }
 
     public void atualizarFuncionario(String cpf, String novoNome, String novoLogin, String novaSenha) {

@@ -27,7 +27,7 @@ public class EntregadorController {
                 return entregador;
             }
         }
-        return null; // Entregador não encontrado
+        return null; // Entregador não encontrado.
     }
 
     public void atualizarEntregador(String cpf, String novoNome, String novoLogin, String novaSenha, String novoVeiculo) {
