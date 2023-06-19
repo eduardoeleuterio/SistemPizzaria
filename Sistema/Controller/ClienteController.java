@@ -60,7 +60,7 @@ public class ClienteController {
                 clientes = (List<Cliente>) objeto;
             }
         } catch (IOException | ClassNotFoundException e) {
-            // Tratar exceção adequadamente
+            // Tratar exceção adequadamente.
             e.printStackTrace();
         }
     }
