@@ -28,7 +28,7 @@ public class AtendenteController {
                 return atendente;
             }
         }
-        return null; // Atendente não encontrado
+        return null; // Atendente não encontrado.
     }
 
     public void atualizarAtendente(String cpf, String novoNome, String novoLogin, String novaSenha) {
