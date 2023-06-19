@@ -69,7 +69,7 @@ public class ClienteController {
         try {
             Serializador.gravar(ARQUIVO_CLIENTES, clientes);
         } catch (IOException e) {
-            // Tratar exceção adequadamente
+            // Tratar exceção adequadamente.
             e.printStackTrace();
         }
     }
